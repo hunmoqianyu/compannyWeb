@@ -1,0 +1,51 @@
+{% extends "./base.html" %}
+{% block content %}
+    <div class="Displaybanner">
+
+    <p mod-img="static/upload/chanpinbanner/windex_img38.jpg" pc-img="static/t/webimages/windex_img38.jpg"><img src="static/t/webimages/windex_img38.jpg" alt="解决方案" title="解决方案" /></p>
+
+    </div>
+    <div class="commonclass">
+        <div class="commonweb">
+            <h3>定制研发</h3>
+            <ul class="clearfix">
+            </ul>
+            <script>
+                $("#_menutwo3").addClass("cur");
+            </script>
+        </div>
+    </div>
+    <!--content-->
+    <div class="commonweb mb60">
+        <div class="title visible-lg">
+            定制研发
+            <span class="hidden-sm">
+                <a href="/">首页</a> >
+            <a href="javascript:;" class="on">定制研发</a>
+            </span>
+        </div>
+        <div class="solution02 commonSolution wqpcommonbg" id="list">
+            <dl class="clearfix">
+                <dt class="col-sm-6">
+                    <span class="arror"></span>
+                    <a href="ssolution-con.html">
+                        <img src="static/upload/solution/24.jpg" alt="多媒体线缆 解决方案" title="多媒体线缆 解决方案" /></a>
+                </dt>
+                <dd class="col-sm-6">
+                    <h3>多媒体线缆 解决方案</h3>
+                    <p class="font13">在如今多元化科技时代里，多媒体应用扮演着相当重要的角色，科技，改变生活，也促使线缆行业更新换代，从传统单根铜芯演变至今的USB 3.1、HD…</p>
+                    <p class="more"><a href="solution-con.html">查看详情</a></p>
+                </dd>
+            </dl>
+
+        </div>
+
+        <div class="wpage">
+            <a href="javascript:;"></a>
+        </div>
+        <script src="static/js/loadmore.js"></script>
+        <script type="text/javascript">$(function () { $(".wpage").LoadMoreAjax({ totalpage: 1, con: "#list", url: "/custom_made" }); });</script>
+    </div>
+    <!--content end-->
+<!--页脚end-->
+{% endblock %}

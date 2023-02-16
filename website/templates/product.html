@@ -1,0 +1,126 @@
+﻿{% extends "./base.html" %}
+{% block content %}
+<!--头部导航end} -->
+<!--头部导航end} -->
+<div class="Displaybanner">
+
+    <p mod-img="/static/upload/chanpinbanner/2016092914081925.jpg"
+       pc-img="/static/upload/chanpinbanner/2016092911124139.jpg"><img
+            src="/static/upload/chanpinbanner/2016092911124139.jpg" alt="产品中心" title="产品中心"/></p>
+
+</div>
+<div class="commonclass">
+    <div class="commonweb">
+
+        <ul class="clearfix">
+            <li><a href="/product/1" id="_menutwo17 product_a"  onclick="cur_add(this)">加固手持机</a></li>
+
+            <li><a href="/product/2" id="_menutwo18 product_a"  onclick="cur_add(this)">加固平板电脑</a></li>
+
+            <li><a href="/product/3" id="_menutwo19 product_a" onclick="cur_add(this)">加固笔记本</a></li>
+
+            <li><a href="/product/4" id="_menutwo20 product_a"  onclick="cur_add(this)">防爆平板</a></li>
+
+            <li><a href="/product/5"  id="_menutwo21 product_a" onclick="cur_add(this)">更多</a></li>
+
+        </ul>
+
+    </div>
+    <div class="commonweb">
+        <br>
+        <a class="p1">尺寸筛选:</a>
+        <div class="clearfix">
+
+            <a><input onclick="dj()" type="checkbox" value="4" name="check1" class="mgc mgc-success">4 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="5" name="check1" class="mgc mgc-success">5 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="6" name="check1" class="mgc mgc-success">6 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="7" name="check1" class="mgc mgc-success">7 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="8" name="check1" class="mgc mgc-success">8 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="10.1" name="check1" class="mgc mgc-success">10.1 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="12.2" name="check1" class="mgc mgc-success">12.2 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="13.3" name="check1" class="mgc mgc-success">13.3 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="14" name="check1" class="mgc mgc-success">14 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="15.6" name="check1" class="mgc mgc-success">15.6 英寸</a>
+
+            <a><input onclick="dj()" type="checkbox" value="21.5" name="check1" class="mgc mgc-success">21.5 英寸</a>
+        </div>
+        <div class="commonweb">
+            <br>
+            <a class="p1">操作系统：</a>
+            <div class="clearfix">
+                <a>
+                    <input onclick="dj()" type="checkbox" value="1" name="check2" class="mgc mgc-success">Android
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="2" name="check2" class="mgc mgc-success">Windows
+                </a>
+            </div>
+        </div>
+        <div class="commonweb">
+            <br>
+            <a class="p1">产品功能：</a>
+            <div class="clearfix">
+
+                <label>
+                    <input onclick="dj()" type="checkbox" value="1" name="check3" class="mgc mgc-success">HF RFID
+                </label>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="2" name="check3" class="mgc mgc-success">条码扫描
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="3" name="check3" class="mgc mgc-success">UHF RFID
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="4" name="check3" class="mgc mgc-success">LF RFID
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="5" name="check3" class="mgc mgc-success">NFC
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="6" name="check3" class="mgc mgc-success">指纹识别
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="7" name="check3" class="mgc mgc-success">GPS
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="8" name="check3" class="mgc mgc-success">摄像头
+                </a>
+                <a>
+                    <input onclick="dj()" type="checkbox" value="9" name="check3" class="mgc mgc-success">身份证识别
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<!--content-->
+
+<div class="commonweb pb40">
+    <div class="commonwebbox pb40">
+        <ul class="clearfix" id="list_p">
+            {% for pro in pro %}
+            <li class="productlist col-lg-4 col-md-4 col-sm-6 " id="whole">
+                <a href="javascript:none">
+                    <img src="/media/{{ pro.imgs }}">
+                    <h3>{{ pro.name }}</h3>
+                    <p>{{pro.details}}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<!--content end-->
+<!--页脚begin-->
+{% endblock %}

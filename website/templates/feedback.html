@@ -1,0 +1,78 @@
+﻿{% extends "./base.html" %}
+{% block content %}
+
+<!--头部导航end} -->
+<!--头部导航end} -->
+<div class="Displaybanner">
+
+    <p mod-img="static/upload/chanpinbanner/222.jpg" pc-img="static/t/webimages/windex_img37.jpg"><img
+            src="static/t/webimages/windex_img37.jpg" alt="联系我们" title="联系我们"/></p>
+
+</div>
+<
+<div class="commonclass">
+    <div class="commonweb">
+        <h3>公司简介</h3>
+        <ul class="clearfix">
+
+            <li><a href="/profile" id="_menutwo9">公司简介</a></li>
+
+            <li><a href="/contact" id="_menutwo38">联系我们</a></li>
+
+            <li><a href="/clients" id="_menutwo14">合作客户</a></li>
+
+            <li><a href="/feedback" id="_menutwo15">在线留言</a></li>
+
+
+        </ul>
+        <script>
+                $("#_menutwo15").addClass("cur");
+        </script>
+    </div>
+</div>
+
+<!--content-->
+
+<div class="commonweb">
+    <div class="title visible-lg">
+        在线留言
+        <span class="hidden-sm">
+                <a href="/">首页</a> >
+            
+            <a href="/profile">关于我们</a> >
+            
+            <a href="javascript:;" class="on">在线留言</a>
+            </span>
+    </div>
+
+    <div class="leavecommentstwo wqpcommonbg"><h3>尊敬的客户朋友，请将您的意见建议通过下表反馈给我们，我们会尽快与您联系。<em>（以下 * 均为必填项）</em></h3>
+        <form id="feedback">
+            <dl class="clearfix">
+                <dd class="col-lg-5 col-md-5 col-sm-5"><p>*您的称呼：</p><label class="clearfix"><input id="name"
+                                                                                                   type="text"></label>
+                </dd>
+                <dd class="col-lg-2 col-md-2 col-sm-2 visible-smlg">&nbsp;</dd>
+                <dd class="col-lg-5 col-md-5 col-sm-5"><p>您的电话：</p><label class="clearfix"><input id="phone"
+                                                                                                  type="text"></label>
+                </dd>
+                <dd class="col-lg-5 col-md-5 col-sm-5"><p>*您的Email：</p><label class="clearfix"><input id="email"
+                                                                                                      type="text"></label>
+                </dd>
+                <dd class="col-lg-2 col-md-2 col-sm-2 visible-smlg">&nbsp;</dd>
+                <dd class="col-lg-5 col-md-5  col-sm-5"><p>您的地址：</p><label class="clearfix"><input id="address"
+                                                                                                   type="text"></label>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dd class="col-lg-12 col-md-12  col-sm-12"><p>*留言内容：</p><label class="clearfix"><textarea
+                        id="content"></textarea></label></dd>
+            </dl>
+            <dl class="clearfix leavecommentstwobutton"><input type="submit" value="提 交"><input type="reset" id="reset"
+                                                                                                value="重 置"></dl>
+        </form>
+    </div>
+
+</div>
+<!--content end-->
+{% endblock %}
+
