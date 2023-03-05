@@ -2,14 +2,26 @@ import json
 
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
-from website.models import Product
+from website.models import Product, MainIMG, New_Product
 from django.db.models import Q
+from django.core.mail import send_mail
 
 """首页"""
 
 
 def index(request):
-    return render(request, 'index.html')
+    mainImg = MainIMG.objects.all()
+    new_product1 = New_Product.objects.filter(type='1')
+    new_product2 = New_Product.objects.filter(type='2')
+    new_product3 = New_Product.objects.filter(type='3')
+    new_product4 = New_Product.objects.filter(type='4')
+    new_product5 = New_Product.objects.filter(type='5')
+    return render(request, 'index.html', {'main_img': mainImg,
+                                          'product1': new_product1,
+                                          'product2': new_product2,
+                                          'product3': new_product3,
+                                          'product4': new_product4,
+                                          'product5': new_product5})
 
 
 def product(request, product_pk):
@@ -52,6 +64,21 @@ def contact(request):
 
 
 def feedback(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        text = request.POST.get('content')
+        message = "收到一则网站留言来自" + name + "。\n电话号码为：" + phone + "\n邮箱为：" + email + "\n地址:" + address + "\n留言内容" + text + "\n"
+        send_mail(
+            '网站留言',
+            message,
+            'liqy2758@163.com',
+            ['2100878136@qq.com'],
+            fail_silently=False
+        )
+        return HttpResponse("留言成功")
     return render(request, 'feedback.html')
 
 

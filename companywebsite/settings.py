@@ -127,3 +127,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# 163 SMTP 配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'  # 新浪 smtp 服务器地址
+EMAIL_PORT = 25  # 端口号
+#发送邮件的邮箱
+EMAIL_HOST_USER = 'liqy2758@163.com'
+#在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD ="ANFBDMWTOCVGJGAE"
+#收件人看到的发件人
+EMAIL_FROM = "sina<liqy2758@163.com>"

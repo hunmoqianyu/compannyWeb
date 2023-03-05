@@ -46,26 +46,31 @@
     </div>
 
     <div class="leavecommentstwo wqpcommonbg"><h3>尊敬的客户朋友，请将您的意见建议通过下表反馈给我们，我们会尽快与您联系。<em>（以下 * 均为必填项）</em></h3>
-        <form id="feedback">
+        <form id="feedback" method="post">
+              {% csrf_token %}
             <dl class="clearfix">
                 <dd class="col-lg-5 col-md-5 col-sm-5"><p>*您的称呼：</p><label class="clearfix"><input id="name"
+                                                                                                   name="name"
                                                                                                    type="text"></label>
                 </dd>
                 <dd class="col-lg-2 col-md-2 col-sm-2 visible-smlg">&nbsp;</dd>
                 <dd class="col-lg-5 col-md-5 col-sm-5"><p>您的电话：</p><label class="clearfix"><input id="phone"
+                                                                                                  name="phone"
                                                                                                   type="text"></label>
                 </dd>
                 <dd class="col-lg-5 col-md-5 col-sm-5"><p>*您的Email：</p><label class="clearfix"><input id="email"
+                                                                                                      name="email"
                                                                                                       type="text"></label>
                 </dd>
                 <dd class="col-lg-2 col-md-2 col-sm-2 visible-smlg">&nbsp;</dd>
                 <dd class="col-lg-5 col-md-5  col-sm-5"><p>您的地址：</p><label class="clearfix"><input id="address"
+                                                                                                   name="address"
                                                                                                    type="text"></label>
                 </dd>
             </dl>
             <dl class="clearfix">
                 <dd class="col-lg-12 col-md-12  col-sm-12"><p>*留言内容：</p><label class="clearfix"><textarea
-                        id="content"></textarea></label></dd>
+                        id="content" name="content"></textarea></label></dd>
             </dl>
             <dl class="clearfix leavecommentstwobutton"><input type="submit" value="提 交"><input type="reset" id="reset"
                                                                                                 value="重 置"></dl>

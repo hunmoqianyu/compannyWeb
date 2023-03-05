@@ -8,32 +8,12 @@
     </div>
     <div class="bd index-banner">
         <ul>
-
-            <li mod-img="static/upload/3_02.jpg" pc-img="static/upload/1325664.jpg">
+            {% for img in main_img %}
+            <li>
                 <a href="#">
-                    <img src="static/upload/1325664.jpg" alt="111" title="111"></a>
+                    <img src="media/{{img.imgs}}" alt="111" title="111"></a>
             </li>
-
-            <li mod-img="static/upload/banner_02.jpg" pc-img="static/upload/banner.jpg">
-                <a href="#">
-                    <img src="static/upload/banner.jpg" alt="222" title="222"></a>
-            </li>
-
-            <li mod-img="static/upload/chanpinbanner/1562163.jpg" pc-img="static/upload/chanpinbanner/1.jpg">
-                <a href="#">
-                    <img src="static/upload/chanpinbanner/1.jpg" alt="333" title="333"></a>
-            </li>
-
-            <li mod-img="static/upload/chanpinbanner/4562289.jpg" pc-img="static/upload/chanpinbanner/4.jpg">
-                <a href="#">
-                    <img src="static/upload/chanpinbanner/4.jpg" alt="5" title="5"></a>
-            </li>
-
-            <li mod-img="static/upload/chanpinbanner/2562173.jpg" pc-img="static/upload/chanpinbanner/2364208.jpg">
-                <a href="#">
-                    <img src="static/upload/chanpinbanner/2364208.jpg" alt="4" title="4"></a>
-            </li>
-
+            {% endfor %}
         </ul>
     </div>
 </div>
@@ -54,68 +34,19 @@
         <div class="ColumnWraper">
             <div class="indexColumnList swiper-container">
                 <ul class="clearfix swiper-wrapper">
-
+                    {% for product in product1 %}
                     <li class="swiper-slide col-lg-3 col-sm-6">
                         <div class="indexproductCon">
                             <a href="#" class="zoom">
-                                <img src="static/upload/product/xinnengyuan/20276.jpg"></a>
+                                <img src="media/{{product.imgs}}"></a>
                             <div class="indexPro">
-                                <h4 class="wtitle">工业伺服电缆</h4>
-                                <p class="text">自动化电缆的应用领域很广，按照产品类别可以分为动力电源线，伺服电缆，编码器电缆</p>
-                                <p class="more"><a href="#">了解详细</a></p>
+                                <h4 class="wtitle">{{product.name}}</h4>
+                                <p class="text">{{product.details}}</p>
+                                <p class="more"><a href="/product/1">了解详细</a></p>
                             </div>
                         </div>
                     </li>
-
-                    <li class="swiper-slide col-lg-3 col-sm-6">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/xinnengyuan/2517.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">工业动力电缆</h4>
-                                <p class="text">自动化电缆的应用领域很广，按照产品类别可以分为动力电源线，伺服电缆，编码器电缆</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide col-lg-3 col-sm-6">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/xinnengyuan/2464.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">工业编码器电缆介绍</h4>
-                                <p class="text">自动化电缆的应用领域很广，按照产品类别可以分为动力电源线，伺服电缆，编码器电缆</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide col-lg-3 col-sm-6">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/t/webimages/cimg03.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">HDMI</h4>
-                                <p class="text">HDMI线是高清晰多媒体接口线的缩写，能高品质地传输未经压缩的高清视频和多声道音频数据，最高数据传输速度为5Gbps。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide col-lg-3 col-sm-6">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/11.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">高压电池线</h4>
-                                <p class="text">
-                                    汽车内电线是汽车的重要组成部分，相当于人体的“血管“，汽车内部电线大部分以线束形式存在，线束内的低电压连接线常用规格有标称截面积0.5、0.75、1.0、1.5、2.0、2.5、4.0、6.0等平方毫米的电线，它们各自都有允许负载电流值，配用于不同功率用电设备的导线。以整车线束为例，0.5平方毫米规格线适用于仪表灯、指示灯、门灯、顶灯等；0.75规格线适用于牌照灯，前后小灯、制动灯等；1.0规格线适用于转向灯、雾灯等；1.5规格线适用于前大灯、喇叭等；</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
+                    {% endfor %}
 
                 </ul>
                 <p class="wbannerbtn wbannerbtn01"></p>
@@ -124,43 +55,19 @@
             <div class="indexColumnList swiper-container2">
                 <ul class="clearfix swiper-wrapper">
 
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
+                    {% for product in product2 %}
+                    <li class="swiper-slide col-lg-3 col-sm-6">
                         <div class="indexproductCon">
                             <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/11.jpg"></a>
+                                <img src="media/{{product.imgs}}"></a>
                             <div class="indexPro">
-                                <h4 class="wtitle">高压电池线</h4>
-                                <p class="text">
-                                    汽车内电线是汽车的重要组成部分，相当于人体的“血管“，汽车内部电线大部分以线束形式存在，线束内的低电压连接线常用规格有标称截面积0.5、0.75、1.0、1.5、2.0、2.5、4.0、6.0等平方毫米的电线，它们各自都有允许负载电流值，配用于不同功率用电设备的导线。以整车线束为例，0.5平方毫米规格线适用于仪表灯、指示灯、门灯、顶灯等；0.75规格线适用于牌照灯，前后小灯、制动灯等；1.0规格线适用于转向灯、雾灯等；1.5规格线适用于前大灯、喇叭等；</p>
-                                <p class="more"><a href="#">了解详细</a></p>
+                                <h4 class="wtitle">{{product.name}}</h4>
+                                <p class="text">{{product.details}}</p>
+                                <p class="more"><a href="/product/2">了解详细</a></p>
                             </div>
                         </div>
                     </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/EV-Cable1.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">充电桩线缆市场规格</h4>
-                                <p class="text">本产品适用于各种电动汽车、充电桩、换电站、 充电站使用。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/EV-Cable1.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">EV充电桩线CQC&DEKRA</h4>
-                                <p class="text">本产品适用于各种电动汽车、充电桩、换电站、 充电站使用。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
+                    {% endfor %}
 
                 </ul>
                 <p class="wbannerbtn wbannerbtn02"></p>
@@ -169,54 +76,19 @@
             <div class="indexColumnList swiper-container3">
                 <ul class="clearfix swiper-wrapper">
 
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
+                    {% for product in product3 %}
+                    <li class="swiper-slide col-lg-3 col-sm-6">
                         <div class="indexproductCon">
                             <a href="#" class="zoom">
-                                <img src="static/upload/product/duomeiti/USB3.jpg"></a>
+                                <img src="media/{{product.imgs}}"></a>
                             <div class="indexPro">
-                                <h4 class="wtitle">USB 线缆系列</h4>
-                                <p class="text">USB是PC领域上应用的最广泛的一种外部总线标准，用于规范电脑与外部设备的连接和通讯，USB接口支持设备的即插即用和热插拔功能。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
+                                <h4 class="wtitle">{{product.name}}</h4>
+                                <p class="text">{{product.details}}</p>
+                                <p class="more"><a href="/product/3">了解详细</a></p>
                             </div>
                         </div>
                     </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/duomeiti/16.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">SATA 3.2 线缆系列</h4>
-                                <p class="text">SATA 3.0最终规格相比SATA 2.0版本除了频宽提升一倍至6Gb/s
-                                    。同时亦多入了多项全新技术，包括新增NCQ指令以改良传输技术，并减低传输时所需功耗。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/t/webimages/cimg03.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">HDMI</h4>
-                                <p class="text">HDMI线是高清晰多媒体接口线的缩写，能高品质地传输未经压缩的高清视频和多声道音频数据，最高数据传输速度为5Gbps。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/t/webimages/cimg03.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">MHL 3.0</h4>
-                                <p class="text">MHL接口够将移动设备中的视频信号与音频信号同时传输到外接显示设备上</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
+                    {% endfor %}
 
 
                 </ul>
@@ -224,75 +96,38 @@
             </div>
             <div class="indexColumnList swiper-container4">
                 <ul class="clearfix swiper-wrapper">
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
+                    {% for product in product4 %}
+                    <li class="swiper-slide col-lg-3 col-sm-6">
                         <div class="indexproductCon">
                             <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/11.jpg"></a>
+                                <img src="media/{{product.imgs}}"></a>
                             <div class="indexPro">
-                                <h4 class="wtitle">高压电池线</h4>
-                                <p class="text">
-                                    汽车内电线是汽车的重要组成部分，相当于人体的“血管“，汽车内部电线大部分以线束形式存在，线束内的低电压连接线常用规格有标称截面积0.5、0.75、1.0、1.5、2.0、2.5、4.0、6.0等平方毫米的电线，它们各自都有允许负载电流值，配用于不同功率用电设备的导线。以整车线束为例，0.5平方毫米规格线适用于仪表灯、指示灯、门灯、顶灯等；0.75规格线适用于牌照灯，前后小灯、制动灯等；1.0规格线适用于转向灯、雾灯等；1.5规格线适用于前大灯、喇叭等；</p>
-                                <p class="more"><a href="#">了解详细</a></p>
+                                <h4 class="wtitle">{{product.name}}</h4>
+                                <p class="text">{{product.details}}</p>
+                                <p class="more"><a href="/product/4">了解详细</a></p>
                             </div>
                         </div>
                     </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/EV-Cable1.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">充电桩线缆市场规格</h4>
-                                <p class="text">本产品适用于各种电动汽车、充电桩、换电站、 充电站使用。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/EV-Cable1.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">EV充电桩线CQC&DEKRA</h4>
-                                <p class="text">本产品适用于各种电动汽车、充电桩、换电站、 充电站使用。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
-
+                    {% endfor %}
 
                 </ul>
                 <p class="wbannerbtn wbannerbtn04"></p>
             </div>
             <div class="indexColumnList swiper-container5">
                 <ul class="clearfix swiper-wrapper">
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
+                    {% for product in product5 %}
+                    <li class="swiper-slide col-lg-3 col-sm-6">
                         <div class="indexproductCon">
                             <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/11.jpg"></a>
+                                <img src="media/{{product.imgs}}"></a>
                             <div class="indexPro">
-                                <h4 class="wtitle">高压电池线</h4>
-                                <p class="text">
-                                    汽车内电线是汽车的重要组成部分，相当于人体的“血管“，汽车内部电线大部分以线束形式存在，线束内的低电压连接线常用规格有标称截面积0.5、0.75、1.0、1.5、2.0、2.5、4.0、6.0等平方毫米的电线，它们各自都有允许负载电流值，配用于不同功率用电设备的导线。以整车线束为例，0.5平方毫米规格线适用于仪表灯、指示灯、门灯、顶灯等；0.75规格线适用于牌照灯，前后小灯、制动灯等；1.0规格线适用于转向灯、雾灯等；1.5规格线适用于前大灯、喇叭等；</p>
-                                <p class="more"><a href="#">了解详细</a></p>
+                                <h4 class="wtitle">{{product.name}}</h4>
+                                <p class="text">{{product.details}}</p>
+                                <p class="more"><a href="/product/5">了解详细</a></p>
                             </div>
                         </div>
                     </li>
-
-                    <li class="col-lg-3 col-sm-6 swiper-slide">
-                        <div class="indexproductCon">
-                            <a href="#" class="zoom">
-                                <img src="static/upload/product/diandongche/EV-Cable1.jpg"></a>
-                            <div class="indexPro">
-                                <h4 class="wtitle">充电桩线缆市场规格</h4>
-                                <p class="text">本产品适用于各种电动汽车、充电桩、换电站、 充电站使用。</p>
-                                <p class="more"><a href="#">了解详细</a></p>
-                            </div>
-                        </div>
-                    </li>
+                    {% endfor %}
                 </ul>
                 <p class="wbannerbtn wbannerbtn05"></p>
             </div>
@@ -475,25 +310,6 @@
         </div>
     </div>
 </div>
-
-
-<div class="indexColumnFour scroll">
-    <div class="commonweb windexCompany">
-        <h3 class="indexColumnTitle">
-            <img src="static/t/webimages/windex_img8.png"></h3>
-        <ul class="clearfix">
-
-            <li class="col-xs-6 col-md-3">
-                <a href="/profile" class="winco winco1"></a>
-                <div class="wicontent">
-                    <h4><a href="/profile">公司简介</a></h4>
-                    <p>质量稳定、性能可靠，确立“XXX品牌”在线缆界的地位。</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-
 <!--悬浮-->
 <div class="rightFixed">
     <ul>
@@ -513,12 +329,6 @@
             <a href="javascript:;">
                 <span class="inco03 inco"></span>
                 <em>案例</em>
-            </a>
-        </li>
-        <li class="li1">
-            <a href="javascript:;">
-                <span class="inco04 inco"></span>
-                <em>公司</em>
             </a>
         </li>
         <li class="li2">

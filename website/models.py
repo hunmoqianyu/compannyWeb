@@ -19,3 +19,15 @@ class Product(models.Model):
                                                         ("3", "UHF RFID"), ("4", "LF RFID "), ("5", "NFC"),
                                                         ("6", "指纹识别"), ("7", "GPS  "), ("8", "摄像头"),
                                                         ("9", "身份证识别")))
+
+
+class MainIMG(models.Model):
+    imgs = models.ImageField(upload_to='img')
+
+
+class New_Product(models.Model):
+    imgs = models.ImageField(upload_to='img')
+    name = models.CharField(max_length=20)
+    details = models.CharField(max_length=200)
+    type = models.CharField(max_length=10,
+                            choices=(("1", "手持机"), ("2", "平板电脑"), ("3", "笔记本"), ("4", "防爆平板"), ("5", "其他")))
