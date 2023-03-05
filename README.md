@@ -15,10 +15,16 @@
 ![img_3.png](img_3.png)
 
 修改步骤：
-1，删除自带数据库，db.splite3,进行数据迁移,执行命令
+1，删除自带数据库，db.splite3,
+
+   进行数据迁移,执行命令
+
   python manage.py makemigrations
+
   python mange.py migrate
+
   创建超级用户
+
   python manage.py createsuperuser
 
 2，修改留言功能的邮箱为自己的邮箱：
