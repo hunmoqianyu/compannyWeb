@@ -21,7 +21,7 @@
 
   python manage.py makemigrations
 
-  python mange.py migrate
+  python manage.py migrate
 
   创建超级用户
 

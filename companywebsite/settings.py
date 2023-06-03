@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=et^$g%-(6$30h4dd@6b!)xk^^&f9$eerv!bp8!xc0ziy%c68c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -124,10 +124,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
 
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static')
+#]
+#生产环境下
+STATIC_ROOT = os.path.join(BASE_DIR,"static")
 # 163 SMTP 配置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'  # 新浪 smtp 服务器地址
